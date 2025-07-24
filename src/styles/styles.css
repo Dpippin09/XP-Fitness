@@ -1,13 +1,14 @@
-/* Global Styles - TOUGH THEME */
+/* Global Styles - VASA FITNESS OFFICIAL THEME */
 body {
-  font-family: 'Impact', 'Franklin Gothic Bold', 'Arial Black', sans-serif;
+  font-family: 'Inter', 'Helvetica Neue', 'Arial', sans-serif;
   margin: 0;
   padding: 0;
-  background: linear-gradient(135deg, #0f0f0f 0%, #1a1a1a 25%, #2d2d2d 50%, #1a1a1a 75%, #0f0f0f 100%);
+  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 25%, #f1f3f4 50%, #ffffff 75%, #f8f9fa 100%);
   background-attachment: fixed;
   min-height: 100vh;
-  color: #fff;
+  color: #2c3e50;
   position: relative;
+  line-height: 1.6;
 }
 
 body::before {
@@ -18,9 +19,9 @@ body::before {
   right: 0;
   bottom: 0;
   background-image: 
-    radial-gradient(circle at 20% 50%, rgba(255, 0, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 80% 20%, rgba(255, 69, 0, 0.1) 0%, transparent 50%),
-    radial-gradient(circle at 40% 80%, rgba(255, 20, 20, 0.1) 0%, transparent 50%);
+    radial-gradient(circle at 20% 50%, rgba(220, 53, 69, 0.03) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(220, 53, 69, 0.04) 0%, transparent 50%),
+    radial-gradient(circle at 40% 80%, rgba(108, 117, 125, 0.02) 0%, transparent 50%);
   pointer-events: none;
   z-index: -1;
 }
@@ -34,32 +35,29 @@ body::before {
 .app-header {
   text-align: center;
   margin-bottom: 30px;
-  color: #ff4444;
-  text-transform: uppercase;
+  color: #2c3e50;
 }
 
 .app-header h1 {
   font-size: 3rem;
   margin-bottom: 10px;
-  text-shadow: 
-    3px 3px 0px #000,
-    6px 6px 0px rgba(255, 68, 68, 0.3),
-    9px 9px 20px rgba(255, 0, 0, 0.5);
-  letter-spacing: 3px;
-  font-weight: 900;
-  background: linear-gradient(45deg, #ff4444, #ff6666, #ff8888);
+  text-shadow: none;
+  letter-spacing: -1px;
+  font-weight: 700;
+  background: linear-gradient(135deg, #dc3545, #c82333);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-family: 'Inter', sans-serif;
 }
 
 .app-header p {
-  font-size: 1.3rem;
-  color: #ccc;
-  font-weight: bold;
+  font-size: 1.2rem;
+  color: #6c757d;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 2px;
-  text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+  text-shadow: none;
 }
 
 .app-main {
@@ -69,16 +67,28 @@ body::before {
   gap: 20px;
 }
 
-/* Level System Styles - TOUGH THEME */
+/* Level System Styles - VASA FITNESS OFFICIAL THEME WITH METALLIC ACCENTS */
 .level-system {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(145deg, 
+    #f8f9fa 0%, 
+    #e9ecef 25%, 
+    #ffffff 50%, 
+    #f1f3f4 75%, 
+    #e9ecef 100%);
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.6),
-    inset 0 1px 0 rgba(255, 68, 68, 0.3),
-    0 0 30px rgba(255, 0, 0, 0.2);
-  border: 3px solid #ff4444;
+    0 10px 30px rgba(0,0,0,0.15),
+    0 1px 3px rgba(0,0,0,0.1),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  border: 2px solid;
+  border-image: linear-gradient(135deg, 
+    #c0c0c0, 
+    #e8e8e8, 
+    #ffffff, 
+    #d8d8d8, 
+    #c8c8c8) 1;
   position: relative;
   overflow: hidden;
 }
@@ -90,11 +100,16 @@ body::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 68, 68, 0.1), transparent);
-  animation: sweep 3s infinite;
+  background: linear-gradient(90deg, 
+    transparent, 
+    rgba(192, 192, 192, 0.3), 
+    rgba(255, 255, 255, 0.6), 
+    rgba(192, 192, 192, 0.3), 
+    transparent);
+  animation: metallicSweep 6s infinite;
 }
 
-@keyframes sweep {
+@keyframes metallicSweep {
   0% { left: -100%; }
   100% { left: 100%; }
 }
@@ -103,36 +118,42 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 20px;
+  margin-bottom: 25px;
   position: relative;
   z-index: 1;
 }
 
 .level-header h2 {
-  font-size: 2.5rem;
+  font-size: 2.2rem;
   margin: 0;
-  color: #ff4444;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 
-    2px 2px 0px #000,
-    4px 4px 0px rgba(255, 68, 68, 0.5);
-  letter-spacing: 2px;
+  color: #2c3e50;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .rank {
-  background: linear-gradient(145deg, #ff4444, #cc0000);
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 25px;
-  font-weight: 900;
-  font-size: 1rem;
+  background: linear-gradient(145deg, 
+    #b8b8b8 0%, 
+    #d8d8d8 25%, 
+    #f0f0f0 50%, 
+    #e8e8e8 75%, 
+    #c8c8c8 100%);
+  color: #2c3e50;
+  padding: 12px 24px;
+  border-radius: 30px;
+  font-weight: 700;
+  font-size: 0.95rem;
   text-transform: uppercase;
   letter-spacing: 1px;
   box-shadow: 
-    0 4px 15px rgba(255, 68, 68, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 2px solid #ff6666;
+    0 6px 20px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
+  border: 1px solid #a0a0a0;
+  text-shadow: 0 1px 1px rgba(255,255,255,0.8);
 }
 
 .xp-container {
@@ -141,26 +162,39 @@ body::before {
 
 .xp-bar {
   width: 100%;
-  height: 30px;
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+  height: 24px;
+  background: linear-gradient(145deg, 
+    #e0e0e0 0%, 
+    #f5f5f5 25%, 
+    #ffffff 50%, 
+    #f0f0f0 75%, 
+    #d8d8d8 100%);
   border-radius: 15px;
   overflow: hidden;
-  margin-bottom: 10px;
-  border: 3px solid #ff4444;
+  margin-bottom: 15px;
+  border: 2px solid #b0b0b0;
   box-shadow: 
-    inset 0 2px 5px rgba(0,0,0,0.8),
-    0 0 20px rgba(255, 68, 68, 0.3);
+    inset 0 3px 6px rgba(0,0,0,0.2),
+    inset 0 -1px 0 rgba(255,255,255,0.8),
+    0 2px 4px rgba(0,0,0,0.1);
 }
 
 .xp-progress {
   height: 100%;
-  background: linear-gradient(90deg, #ff4444, #ff6666, #ff8888);
-  border-radius: 15px;
-  transition: width 0.5s ease;
+  background: linear-gradient(90deg, 
+    #dc3545 0%, 
+    #e85765 25%, 
+    #ff6b7a 50%, 
+    #dc3545 75%, 
+    #c82333 100%);
+  border-radius: 13px;
+  transition: width 0.8s ease;
   position: relative;
   box-shadow: 
-    0 0 10px rgba(255, 68, 68, 0.8),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    0 0 15px rgba(220, 53, 69, 0.4),
+    inset 0 1px 0 rgba(255,255,255,0.6),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
+  border: 1px solid rgba(0,0,0,0.1);
 }
 
 .xp-progress::after {
@@ -170,8 +204,8 @@ body::before {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
-  animation: shimmer 2s infinite;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 3s infinite;
 }
 
 @keyframes shimmer {
@@ -182,42 +216,42 @@ body::before {
 .xp-text {
   display: flex;
   justify-content: space-between;
-  font-weight: 900;
-  color: #ff6666;
-  text-transform: uppercase;
-  font-size: 1.1rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  font-weight: 600;
+  color: #2c3e50;
+  text-transform: none;
+  font-size: 1rem;
+  text-shadow: none;
 }
 
 .achievements {
-  background: rgba(231, 76, 60, 0.1);
-  padding: 10px;
-  border-radius: 10px;
-  border-left: 4px solid #e74c3c;
+  background: rgba(220, 53, 69, 0.05);
+  padding: 15px;
+  border-radius: 12px;
+  border-left: 4px solid #dc3545;
+  color: #2c3e50;
 }
 
-/* Progress Tracker Styles - TOUGH THEME */
+/* Progress Tracker Styles - VASA FITNESS INSPIRED THEME */
 .progress-tracker {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.6),
-    0 0 30px rgba(0, 255, 255, 0.1);
-  border: 3px solid #00ffff;
-  color: #fff;
+    0 10px 30px rgba(0,0,0,0.08),
+    0 1px 3px rgba(0,0,0,0.1);
+  border: 1px solid #e9ecef;
+  color: #2c3e50;
 }
 
 .progress-tracker h2 {
-  color: #00ffff;
-  margin-bottom: 20px;
-  font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 
-    2px 2px 0px #000,
-    4px 4px 0px rgba(0, 255, 255, 0.5);
-  letter-spacing: 2px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .workout-stats {
@@ -228,48 +262,72 @@ body::before {
 }
 
 .stat-item {
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  padding: 18px;
-  border-radius: 12px;
+  background: linear-gradient(145deg, 
+    #f0f0f0 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
+  padding: 20px;
+  border-radius: 15px;
   display: flex;
   justify-content: space-between;
-  border: 2px solid #00ffff;
+  border: 2px solid #b8b8b8;
   box-shadow: 
-    0 4px 15px rgba(0, 255, 255, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 6px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-item:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 
 .stat-label {
-  font-weight: 900;
-  color: #fff;
+  font-weight: 600;
+  color: #7f8c8d;
   text-transform: uppercase;
-  font-size: 0.95rem;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  font-size: 0.85rem;
+  text-shadow: none;
+  letter-spacing: 0.5px;
 }
 
 .stat-value {
-  color: #00ffff;
-  font-weight: 900;
-  font-size: 1.3rem;
-  text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+  color: #dc3545;
+  font-weight: 700;
+  font-size: 1.4rem;
+  text-shadow: none;
 }
 
 .xp-breakdown {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  padding: 20px;
-  border-radius: 10px;
-  border: 2px solid #00ff00;
+  background: linear-gradient(145deg, 
+    #f0f0f0 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
+  padding: 25px;
+  border-radius: 15px;
+  border: 2px solid #b8b8b8;
+  border-left: 4px solid #dc3545;
   box-shadow: 
-    0 4px 15px rgba(0, 255, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 6px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
 }
 
 .xp-breakdown h3 {
-  color: #00ff00;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+  color: #dc3545;
+  margin-bottom: 20px;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .activity-list {
@@ -279,109 +337,115 @@ body::before {
 }
 
 .activity-list li {
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  color: #fff;
-  padding: 10px;
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  color: #2c3e50;
+  padding: 12px;
   margin-bottom: 8px;
-  border-radius: 5px;
-  border-left: 3px solid #00ff00;
+  border-radius: 8px;
+  border-left: 3px solid #dc3545;
   box-shadow: 
-    0 2px 5px rgba(0,0,0,0.5),
-    0 0 10px rgba(0, 255, 0, 0.1);
-  font-weight: 600;
+    0 2px 8px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
+  font-weight: 400;
 }
 
 .session-total {
   text-align: center;
   font-size: 1.3rem;
-  color: #00ff00;
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  padding: 15px;
-  border-radius: 10px;
-  border: 2px solid #00ff00;
+  color: #dc3545;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  padding: 20px;
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+  border-left: 4px solid #dc3545;
   box-shadow: 
-    0 4px 15px rgba(0, 255, 0, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 0 0 10px rgba(0, 255, 0, 0.5);
+    0 4px 15px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
 }
 
-/* Action Buttons - TOUGH THEME */
+/* Action Buttons - VASA FITNESS INSPIRED THEME */
 .action-buttons {
   display: flex;
-  gap: 15px;
+  gap: 20px;
   justify-content: center;
-  margin: 25px 0;
+  margin: 30px 0;
 }
 
 .workout-btn, .reset-btn {
-  padding: 18px 35px;
+  padding: 16px 32px;
   border: none;
-  border-radius: 30px;
-  font-size: 1.2rem;
-  font-weight: 900;
+  border-radius: 25px;
+  font-size: 1rem;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   text-transform: uppercase;
-  letter-spacing: 2px;
+  letter-spacing: 1px;
   position: relative;
   overflow: hidden;
+  font-family: 'Inter', sans-serif;
 }
 
 .workout-btn {
-  background: linear-gradient(145deg, #ff4444, #cc0000);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
   box-shadow: 
-    0 6px 20px rgba(255, 68, 68, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 3px solid #ff6666;
+    0 4px 15px rgba(220, 53, 69, 0.3);
+  border: 1px solid #c82333;
 }
 
 .workout-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 
-    0 10px 25px rgba(255, 68, 68, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  background: linear-gradient(145deg, #ff6666, #ff4444);
+    0 8px 25px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(145deg, #c82333, #bd2130);
 }
 
 .reset-btn {
-  background: linear-gradient(145deg, #666, #333);
+  background: linear-gradient(145deg, #95a5a6, #7f8c8d);
   color: white;
   box-shadow: 
-    0 6px 20px rgba(102, 102, 102, 0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  border: 3px solid #888;
+    0 4px 15px rgba(149, 165, 166, 0.3);
+  border: 1px solid #7f8c8d;
 }
 
 .reset-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
   box-shadow: 
-    0 10px 25px rgba(102, 102, 102, 0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  background: linear-gradient(145deg, #888, #555);
+    0 8px 25px rgba(149, 165, 166, 0.4);
+  background: linear-gradient(145deg, #7f8c8d, #6c7b7d);
 }
 
-/* Game Info */
+/* Game Info - VASA FITNESS WITH METALLIC ACCENTS */
 .game-info {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  padding: 25px;
-  border-radius: 15px;
-  border: 2px solid #9b59b6;
+  background: linear-gradient(145deg, 
+    #f0f0f0 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
+  padding: 30px;
+  border-radius: 20px;
+  border: 2px solid #b8b8b8;
+  border-left: 4px solid #a0a0a0;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.6),
-    0 0 20px rgba(155, 89, 182, 0.3);
-  color: #fff;
+    0 10px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  color: #2c3e50;
 }
 
 .game-info h3 {
-  color: #9b59b6;
-  margin-bottom: 15px;
+  color: #2c3e50;
+  margin-bottom: 20px;
   font-size: 1.5rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .game-info ul {
@@ -390,28 +454,35 @@ body::before {
 }
 
 .game-info li {
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  color: #fff;
-  padding: 12px;
-  margin-bottom: 8px;
-  border-radius: 8px;
-  border-left: 4px solid #9b59b6;
-  font-weight: 600;
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
+  color: #2c3e50;
+  padding: 15px;
+  margin-bottom: 12px;
+  border-radius: 10px;
+  border-left: 3px solid #6c757d;
+  font-weight: 400;
   box-shadow: 
-    0 2px 5px rgba(0,0,0,0.5),
-    0 0 10px rgba(155, 89, 182, 0.1);
+    0 2px 8px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
+  line-height: 1.5;
 }
 
-/* Weekly Challenges Styles - TOUGH THEME */
+/* Weekly Challenges Styles - VASA FITNESS WITH METALLIC ACCENTS */
 .weekly-challenges {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(145deg, 
+    #f8f8f8 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f0f0f0 75%, 
+    #e0e0e0 100%);
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.6),
-    0 0 30px rgba(255, 140, 0, 0.2);
-  border: 3px solid #ff8c00;
-  color: white;
+    0 10px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  border: 2px solid #c0c0c0;
+  color: #2c3e50;
   position: relative;
   overflow: hidden;
 }
@@ -423,8 +494,8 @@ body::before {
   right: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 140, 0, 0.1), transparent);
-  animation: sweep-reverse 4s infinite;
+  background: linear-gradient(90deg, transparent, rgba(46, 204, 113, 0.05), transparent);
+  animation: sweep-reverse 5s infinite;
 }
 
 @keyframes sweep-reverse {
@@ -436,36 +507,34 @@ body::before {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   position: relative;
   z-index: 1;
 }
 
 .challenges-header h2 {
   margin: 0;
-  font-size: 2.2rem;
-  color: #ff8c00;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 
-    2px 2px 0px #000,
-    4px 4px 0px rgba(255, 140, 0, 0.5);
-  letter-spacing: 2px;
+  font-size: 2rem;
+  color: #2c3e50;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .reset-timer {
-  background: linear-gradient(145deg, #ff8c00, #cc6600);
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-weight: 900;
-  font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  background: linear-gradient(145deg, #dc3545, #c82333);
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: 0.5px;
   color: #fff;
   box-shadow: 
-    0 4px 15px rgba(255, 140, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 2px solid #ffaa33;
+    0 4px 15px rgba(220, 53, 69, 0.3);
+  border: none;
 }
 
 .challenges-grid {
@@ -476,30 +545,30 @@ body::before {
 }
 
 .challenge-card {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 12px;
-  padding: 20px;
-  color: #fff;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  padding: 25px;
+  color: #2c3e50;
   transition: all 0.3s ease;
-  border: 2px solid transparent;
+  border: 1px solid #e9ecef;
   position: relative;
   overflow: hidden;
   box-shadow: 
-    0 4px 15px rgba(0,0,0,0.5),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 4px 15px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
 }
 
 .challenge-card:hover {
   transform: translateY(-3px);
   box-shadow: 
-    0 8px 20px rgba(0,0,0,0.7),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
+    0 8px 25px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.1);
+  background: linear-gradient(145deg, #f8f9fa, #ffffff);
 }
 
 .challenge-card.completed {
-  border-color: #27ae60;
-  background: linear-gradient(145deg, #d5f4e6, #a8e6cf);
+  border-color: #dc3545;
+  background: linear-gradient(145deg, #ffeaea, #ffe0e0);
 }
 
 .challenge-card.completed::before {
@@ -532,18 +601,20 @@ body::before {
 }
 
 .challenge-info h3 {
-  margin: 0 0 5px 0;
+  margin: 0 0 8px 0;
   font-size: 1.3rem;
-  color: #fff;
-  text-transform: uppercase;
-  font-weight: 900;
+  color: #2c3e50;
+  text-transform: none;
+  font-weight: 700;
+  font-family: 'Inter', sans-serif;
 }
 
 .challenge-info p {
   margin: 0;
-  color: #ccc;
+  color: #7f8c8d;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .completion-badge {
@@ -566,23 +637,23 @@ body::before {
 
 .progress-bar {
   width: 100%;
-  height: 12px;
-  background-color: #ecf0f1;
-  border-radius: 6px;
+  height: 8px;
+  background-color: #e9ecef;
+  border-radius: 4px;
   overflow: hidden;
-  margin-bottom: 8px;
+  margin-bottom: 10px;
 }
 
 .progress-fill {
   height: 100%;
-  background: linear-gradient(90deg, #f39c12, #e67e22);
-  border-radius: 6px;
+  background: linear-gradient(90deg, #dc3545, #e85765);
+  border-radius: 4px;
   transition: width 0.5s ease;
   position: relative;
 }
 
 .challenge-card.completed .progress-fill {
-  background: linear-gradient(90deg, #27ae60, #2ecc71);
+  background: linear-gradient(90deg, #dc3545, #c82333);
 }
 
 .progress-fill::after {
@@ -609,27 +680,29 @@ body::before {
 }
 
 .progress-text span:first-child {
-  color: #fff;
-  font-weight: 900;
+  color: #2c3e50;
+  font-weight: 600;
 }
 
 .xp-reward {
-  color: #e67e22;
-  font-weight: bold;
+  color: #dc3545;
+  font-weight: 700;
 }
 
 .challenge-card.completed .xp-reward {
-  color: #27ae60;
+  color: #dc3545;
 }
 
 .completion-message {
-  background: linear-gradient(145deg, #27ae60, #2ecc71);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
-  padding: 12px;
-  border-radius: 8px;
+  padding: 15px;
+  border-radius: 12px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 600;
   animation: pulse 2s infinite;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
 }
 
 @keyframes pulse {
@@ -650,50 +723,56 @@ body::before {
   opacity: 0.9;
 }
 
-/* Workout Form Styles - TOUGH THEME */
+/* Workout Form Styles - VASA FITNESS WITH METALLIC ACCENTS */
 .workout-form {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(145deg, 
+    #f8f8f8 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f0f0f0 75%, 
+    #e0e0e0 100%);
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.6),
-    0 0 30px rgba(255, 165, 0, 0.1);
-  border: 3px solid #ffa500;
-  margin-bottom: 20px;
-  color: #fff;
+    0 10px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  border: 2px solid #c0c0c0;
+  margin-bottom: 25px;
+  color: #2c3e50;
 }
 
 .workout-form h3 {
-  color: #ffa500;
-  margin-bottom: 20px;
+  color: #2c3e50;
+  margin-bottom: 25px;
   font-size: 2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 
-    2px 2px 0px #000,
-    4px 4px 0px rgba(255, 165, 0, 0.5);
-  letter-spacing: 2px;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  letter-spacing: -0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .workout-form h4 {
-  color: #fff;
-  margin-bottom: 15px;
+  color: #2c3e50;
+  margin-bottom: 20px;
   font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 1px;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
-/* Quick Actions - TOUGH THEME */
+/* Quick Actions - VASA FITNESS OFFICIAL THEME */
 .quick-actions {
-  margin-bottom: 25px;
-  padding: 20px;
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  border-radius: 12px;
-  border: 2px solid #ffa500;
+  margin-bottom: 30px;
+  padding: 25px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  border: 1px solid #e9ecef;
+  border-left: 4px solid #dc3545;
   box-shadow: 
-    0 4px 15px rgba(255, 165, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 4px 15px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
 }
 
 .action-buttons-grid {
@@ -703,44 +782,46 @@ body::before {
 }
 
 .quick-btn {
-  padding: 15px 22px;
+  padding: 16px 24px;
   border: none;
-  border-radius: 10px;
-  font-weight: 900;
+  border-radius: 12px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
   font-size: 1rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .quick-btn:not(.checked-in):not(.started):not(.end-workout) {
-  background: linear-gradient(145deg, #ff4444, #cc0000);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
-  border: 2px solid #ff6666;
-  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+  border: 1px solid #c82333;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
 }
 
 .quick-btn:not(.checked-in):not(.started):not(.end-workout):hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.5);
-  background: linear-gradient(145deg, #ff6666, #ff4444);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(145deg, #c82333, #bd2130);
 }
 
 .quick-btn.checked-in, .quick-btn.started {
-  background: linear-gradient(145deg, #27ae60, #2ecc71);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
   cursor: not-allowed;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.3);
 }
 
 .quick-btn.end-workout {
-  background: linear-gradient(145deg, #e74c3c, #c0392b);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
 }
 
 .quick-btn.end-workout:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(231, 76, 60, 0.4);
+  box-shadow: 0 5px 15px rgba(220, 53, 69, 0.4);
 }
 
 .quick-btn:disabled {
@@ -751,14 +832,14 @@ body::before {
 /* Preset Workouts */
 .preset-workouts {
   margin-bottom: 25px;
-  padding: 20px;
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 10px;
-  border-left: 4px solid #9b59b6;
+  padding: 25px;
+  background: linear-gradient(145deg, #ffffff, #f8f9fa);
+  border-radius: 15px;
+  border-left: 4px solid #dc3545;
   box-shadow: 
-    0 4px 15px rgba(155, 89, 182, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  color: #fff;
+    0 4px 15px rgba(0,0,0,0.05),
+    0 1px 3px rgba(0,0,0,0.1);
+  color: #2c3e50;
 }
 
 .preset-grid {
@@ -768,51 +849,65 @@ body::before {
 }
 
 .preset-btn {
-  padding: 15px;
+  padding: 16px;
   border: none;
-  border-radius: 10px;
-  font-weight: bold;
+  border-radius: 12px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  font-size: 0.95rem;
+  font-size: 1rem;
   text-align: center;
+  font-family: 'Inter', sans-serif;
 }
 
 .preset-btn.cardio {
-  background: linear-gradient(145deg, #e74c3c, #c0392b);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
 }
 
 .preset-btn.strength {
-  background: linear-gradient(145deg, #2980b9, #3498db);
+  background: linear-gradient(145deg, #6c757d, #5a6268);
   color: white;
+  box-shadow: 0 4px 15px rgba(108, 117, 125, 0.3);
 }
 
 .preset-btn.heavy {
-  background: linear-gradient(145deg, #8e44ad, #9b59b6);
+  background: linear-gradient(145deg, #495057, #343a40);
   color: white;
+  box-shadow: 0 4px 15px rgba(73, 80, 87, 0.3);
 }
 
 .preset-btn.hiit {
-  background: linear-gradient(145deg, #f39c12, #e67e22);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
 }
 
 .preset-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+  box-shadow: 
+    0 8px 25px rgba(0,0,0,0.1),
+    0 1px 3px rgba(0,0,0,0.1);
 }
 
 /* Manual Input */
 .manual-input {
-  padding: 20px;
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 10px;
-  border-left: 4px solid #27ae60;
+  padding: 25px;
+  background: linear-gradient(145deg, 
+    #f0f0f0 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
+  border-radius: 15px;
+  border: 2px solid #b8b8b8;
+  border-left: 4px solid #a0a0a0;
   box-shadow: 
-    0 4px 15px rgba(39, 174, 96, 0.3),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
-  color: #fff;
+    0 6px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  color: #2c3e50;
 }
 
 .form-grid {
@@ -828,86 +923,114 @@ body::before {
 }
 
 .input-group label {
-  font-weight: 900;
-  margin-bottom: 5px;
-  color: #fff;
-  font-size: 0.95rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  text-shadow: 1px 1px 2px rgba(0,0,0,0.8);
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #2c3e50;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: -0.5px;
+  text-shadow: none;
+  font-family: 'Inter', sans-serif;
 }
 
 .input-group input,
 .input-group select {
-  padding: 12px;
-  border: 2px solid #333;
+  padding: 12px 16px;
+  border: 1px solid #e9ecef;
   border-radius: 8px;
   font-size: 1rem;
   transition: all 0.3s ease;
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  color: #fff;
-  font-weight: 600;
+  background: #ffffff;
+  color: #2c3e50;
+  font-weight: 400;
+  font-family: 'Inter', sans-serif;
 }
 
 .input-group input::placeholder,
 .input-group select::placeholder {
-  color: #999;
-  font-weight: 600;
+  color: #6c757d;
+  font-weight: 400;
 }
 
 .input-group input::-webkit-input-placeholder,
 .input-group select::-webkit-input-placeholder {
-  color: #999;
-  font-weight: 600;
+  color: #6c757d;
+  font-weight: 400;
 }
 
 .input-group input::-moz-placeholder,
 .input-group select::-moz-placeholder {
-  color: #999;
-  font-weight: 600;
+  color: #6c757d;
+  font-weight: 400;
 }
 
 .input-group input:focus,
 .input-group select:focus {
   outline: none;
-  border-color: #27ae60;
+  border-color: #dc3545;
   box-shadow: 
-    0 0 0 3px rgba(39, 174, 96, 0.3),
-    0 0 20px rgba(39, 174, 96, 0.2);
-  background: linear-gradient(145deg, #333, #2d2d2d);
+    0 0 0 3px rgba(220, 53, 69, 0.1),
+    0 2px 8px rgba(0,0,0,0.1);
+  background: #ffffff;
 }
 
 .submit-btn {
-  padding: 15px 30px;
-  background: linear-gradient(145deg, #27ae60, #2ecc71);
-  color: white;
-  border: none;
+  padding: 16px 32px;
+  background: linear-gradient(145deg, 
+    #c0c0c0 0%, 
+    #e0e0e0 25%, 
+    #f8f8f8 50%, 
+    #e8e8e8 75%, 
+    #d0d0d0 100%);
+  color: #2c3e50;
+  border: 2px solid #a0a0a0;
   border-radius: 25px;
   font-size: 1.1rem;
-  font-weight: bold;
+  font-weight: 700;
   cursor: pointer;
   transition: all 0.3s ease;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: 0.5px;
   width: 100%;
+  font-family: 'Inter', sans-serif;
+  box-shadow: 
+    0 6px 20px rgba(0,0,0,0.2),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.2);
+  text-shadow: 0 1px 1px rgba(255,255,255,0.8);
 }
 
 .submit-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 8px 20px rgba(39, 174, 96, 0.4);
+  box-shadow: 
+    0 10px 30px rgba(0,0,0,0.3),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(0,0,0,0.3);
+  background: linear-gradient(145deg, 
+    #d0d0d0 0%, 
+    #f0f0f0 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
 }
 
-/* Auto Tracking Styles - TOUGH THEME */
+/* Auto Tracking Styles - VASA FITNESS OFFICIAL THEME WITH METALLIC ACCENTS */
 .auto-tracking {
-  background: linear-gradient(145deg, #0f0f0f, #000);
-  border-radius: 15px;
-  padding: 25px;
+  background: linear-gradient(145deg, 
+    #f0f0f0 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f8f8f8 75%, 
+    #e0e0e0 100%);
+  border-radius: 20px;
+  padding: 30px;
   box-shadow: 
-    0 8px 25px rgba(0,0,0,0.8),
-    0 0 40px rgba(255, 0, 0, 0.2);
-  border: 3px solid #ff0000;
-  color: white;
-  margin-bottom: 20px;
+    0 10px 30px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
+  border: 2px solid #b8b8b8;
+  color: #2c3e50;
+  margin-bottom: 25px;
   position: relative;
   overflow: hidden;
 }
@@ -919,8 +1042,8 @@ body::before {
   left: -100%;
   width: 100%;
   height: 100%;
-  background: linear-gradient(90deg, transparent, rgba(255, 0, 0, 0.1), transparent);
-  animation: sweep-dark 5s infinite;
+  background: linear-gradient(90deg, transparent, rgba(220, 53, 69, 0.05), transparent);
+  animation: sweep-dark 6s infinite;
 }
 
 @keyframes sweep-dark {
@@ -929,26 +1052,25 @@ body::before {
 }
 
 .auto-tracking h3 {
-  color: #ff0000;
-  margin-bottom: 20px;
-  font-size: 2.2rem;
-  text-transform: uppercase;
-  font-weight: 900;
-  text-shadow: 
-    2px 2px 0px #000,
-    4px 4px 0px rgba(255, 0, 0, 0.5);
-  letter-spacing: 2px;
+  color: #2c3e50;
+  margin-bottom: 25px;
+  font-size: 2rem;
+  text-transform: none;
+  font-weight: 700;
+  text-shadow: none;
+  letter-spacing: -0.5px;
   position: relative;
   z-index: 1;
+  font-family: 'Inter', sans-serif;
 }
 
 .auto-tracking h4 {
-  color: #fff;
-  margin-bottom: 10px;
-  font-size: 1.3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  letter-spacing: 1px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+  font-size: 1.2rem;
+  text-transform: none;
+  font-weight: 600;
+  letter-spacing: 0;
 }
 
 .tracking-features {
@@ -961,122 +1083,151 @@ body::before {
 }
 
 .feature-card {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  border-radius: 12px;
-  padding: 20px;
-  border: 2px solid #ff0000;
+  background: linear-gradient(145deg, 
+    #f8f8f8 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f0f0f0 75%, 
+    #e0e0e0 100%);
+  border-radius: 15px;
+  padding: 25px;
+  border: 2px solid #c0c0c0;
   transition: all 0.3s ease;
   box-shadow: 
-    0 4px 15px rgba(255, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 6px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
 }
 
 .feature-card:hover {
-  background: linear-gradient(145deg, #2d2d2d, #1a1a1a);
-  transform: translateY(-5px);
+  background: linear-gradient(145deg, 
+    #ffffff 0%, 
+    #f8f8f8 25%, 
+    #f0f0f0 50%, 
+    #f8f8f8 75%, 
+    #f0f0f0 100%);
+  transform: translateY(-3px);
   box-shadow: 
-    0 8px 25px rgba(255, 0, 0, 0.4),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    0 10px 35px rgba(0,0,0,0.25),
+    inset 0 1px 0 rgba(255,255,255,0.9),
+    inset 0 -1px 0 rgba(0,0,0,0.15);
 }
 
 .feature-card h4 {
-  margin-bottom: 10px;
-  color: #ff4444;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 1px;
+  margin-bottom: 12px;
+  color: #2c3e50;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: 'Inter', sans-serif;
 }
 
 .feature-card p {
-  margin-bottom: 15px;
-  color: #ccc;
+  margin-bottom: 20px;
+  color: #7f8c8d;
   font-size: 0.95rem;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 1.5;
 }
 
 .feature-btn {
-  padding: 12px 22px;
+  padding: 12px 24px;
   border: none;
-  border-radius: 25px;
-  font-weight: 900;
+  border-radius: 20px;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: block;
   width: 100%;
-  text-transform: uppercase;
-  letter-spacing: 1px;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  font-family: 'Inter', sans-serif;
 }
 
 .feature-btn:not(.active) {
-  background: linear-gradient(145deg, #ff4444, #cc0000);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
-  border: 2px solid #ff6666;
-  box-shadow: 0 4px 15px rgba(255, 68, 68, 0.3);
+  border: 1px solid #c82333;
+  box-shadow: 0 4px 15px rgba(220, 53, 69, 0.3);
 }
 
 .feature-btn:not(.active):hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 68, 68, 0.5);
-  background: linear-gradient(145deg, #ff6666, #ff4444);
+  box-shadow: 0 6px 20px rgba(220, 53, 69, 0.4);
+  background: linear-gradient(145deg, #c82333, #bd2130);
 }
 
 .feature-btn.active {
-  background: linear-gradient(145deg, #666, #333);
+  background: linear-gradient(145deg, #95a5a6, #7f8c8d);
   color: white;
   cursor: not-allowed;
-  border: 2px solid #888;
+  border: 1px solid #7f8c8d;
+  box-shadow: 0 2px 8px rgba(149, 165, 166, 0.3);
 }
 
 .status-indicator {
   display: inline-block;
-  background: linear-gradient(145deg, #ff4444, #cc0000);
+  background: linear-gradient(145deg, #dc3545, #c82333);
   color: white;
-  padding: 8px 15px;
+  padding: 8px 16px;
   border-radius: 20px;
   font-size: 0.9rem;
-  font-weight: 900;
-  animation: pulse-tough 2s infinite;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  border: 2px solid #ff6666;
-  box-shadow: 0 0 15px rgba(255, 68, 68, 0.5);
+  font-weight: 600;
+  animation: pulse-vasa 2s infinite;
+  text-transform: none;
+  letter-spacing: 0.5px;
+  border: 1px solid #c82333;
+  box-shadow: 0 0 15px rgba(220, 53, 69, 0.3);
 }
 
-@keyframes pulse-tough {
-  0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(255, 68, 68, 0.5); }
-  50% { transform: scale(1.05); box-shadow: 0 0 25px rgba(255, 68, 68, 0.8); }
+@keyframes pulse-vasa {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 15px rgba(220, 53, 69, 0.3); }
+  50% { transform: scale(1.02); box-shadow: 0 0 25px rgba(220, 53, 69, 0.5); }
 }
 
 .automation-info,
 .future-features {
-  background: linear-gradient(145deg, #1a1a1a, #0f0f0f);
-  padding: 20px;
-  border-radius: 12px;
-  margin-bottom: 15px;
-  border: 2px solid #ff4444;
+  background: linear-gradient(145deg, 
+    #f8f8f8 0%, 
+    #e8e8e8 25%, 
+    #ffffff 50%, 
+    #f0f0f0 75%, 
+    #e0e0e0 100%);
+  padding: 25px;
+  border-radius: 15px;
+  margin-bottom: 20px;
+  border: 2px solid #c0c0c0;
   box-shadow: 
-    0 4px 15px rgba(255, 68, 68, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+    0 6px 20px rgba(0,0,0,0.15),
+    inset 0 1px 0 rgba(255,255,255,0.8),
+    inset 0 -1px 0 rgba(0,0,0,0.1);
 }
 
 .future-features {
-  border-color: #ffa500;
-  box-shadow: 
-    0 4px 15px rgba(255, 165, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #dc3545;
+}
+
+.automation-info {
+  border-left: 4px solid #dc3545;
 }
 
 .automation-info h4,
 .future-features h4 {
-  color: #ff4444;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 1px;
+  color: #2c3e50;
+  text-transform: none;
+  font-weight: 700;
+  letter-spacing: 0;
+  font-family: 'Inter', sans-serif;
+  margin-bottom: 15px;
+}
+
+.automation-info h4 {
+  color: #dc3545;
 }
 
 .future-features h4 {
-  color: #ffa500;
+  color: #dc3545;
 }
 
 .automation-info ul,
@@ -1089,30 +1240,22 @@ body::before {
 .automation-info li,
 .future-features li {
   padding: 12px 0;
-  border-bottom: 2px solid rgba(255, 68, 68, 0.2);
-  color: #fff;
-  font-weight: 600;
-  font-size: 1.05rem;
-}
-
-.future-features li {
-  border-bottom-color: rgba(255, 165, 0, 0.2);
-}
-
-.automation-info li:last-child,
-.future-features li:last-child {
-  border-bottom: none;
+  border-bottom: 1px solid #e9ecef;
+  color: #2c3e50;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .automation-info li strong,
 .future-features li strong {
-  color: #ff6666;
-  text-transform: uppercase;
-  font-weight: 900;
+  color: #dc3545;
+  text-transform: none;
+  font-weight: 600;
 }
 
 .future-features li strong {
-  color: #ffbb33;
+  color: #dc3545;
 }
 
 /* Responsive Design */
